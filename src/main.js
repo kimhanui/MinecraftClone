@@ -17,7 +17,7 @@ class SimonDevCraft extends game.Game {
     super();
   }
 
-  _OnInitialize() {
+  _OnInitialize() { //부모 클래스에서 초기화시 사용함
     this._entities = {};
 
     this._LoadBackground();
@@ -63,7 +63,7 @@ class SimonDevCraft extends game.Game {
 
 
 function _Main() {
-  _APP = new SimonDevCraft();
+  _APP = new SimonDevCraft(); // main.js가 실행되면서 _APP도 초기화된다
 }
 
 _Main();

@@ -6,13 +6,13 @@ export const clouds = (function() {
 
   class CloudBlock {
     constructor(game) {
-      this._game = game;
+      this._game = game; //클래스에서 프로퍼티 선언하는 법. (this를 붙여준다)
       this._mgr = new voxels.InstancedBlocksManager(this._game);
       this._CreateClouds();
     }
 
     _CreateClouds() {
-      this._cells = {};
+      this._cells = {}; //객체 선언
 
       for (let i = 0; i < 25; i++) {
         const x = Math.floor(math.rand_range(-1000, 1000));
@@ -29,7 +29,7 @@ export const clouds = (function() {
           const zPos = z + zi;
 
           const k = xPos + '.' + zPos;
-          this._cells[k] = {
+          this._cells[k] = { //객체 접근할 때 [ ] 나 .(dot)으로 접근하기도 함.
             position: [xPos, 200, zPos],
             type: 'cloud',
             visible: true

@@ -5,8 +5,8 @@ import {WEBGL} from 'https://cdn.jsdelivr.net/npm/three@0.112.1/examples/jsm/Web
 
 export const graphics = (function() {
   return {
-    Graphics: class {
-      constructor(game) {
+    Graphics: class { 
+      constructor(game) { // Game객체 초기화시 설정
       }
 
       Initialize() {
@@ -21,12 +21,12 @@ export const graphics = (function() {
         this._threejs.setSize(window.innerWidth, window.innerHeight);
 
         const target = document.getElementById('target');
-        target.appendChild(this._threejs.domElement);
+        target.appendChild(this._threejs.domElement); //렌더러가 그릴 캔버스
 
         this._stats = new Stats();
-				target.appendChild(this._stats.dom);
+		target.appendChild(this._stats.dom);
 
-        window.addEventListener('resize', () => {
+        window.addEventListener('resize', () => { // 화면조정시 크기도 조정됨
           this._OnWindowResize();
         }, false);
 
@@ -34,7 +34,7 @@ export const graphics = (function() {
         const aspect = 1920 / 1080;
         const near = 0.1;
         const far = 10000.0;
-        this._camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+        this._camera = new THREE.PerspectiveCamera(fov, aspect, near, far); //카메라 설정
 
         this._scene = new THREE.Scene();
         this._scene.background = new THREE.Color(0xaaaaaa);
