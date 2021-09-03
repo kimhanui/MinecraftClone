@@ -1,4 +1,4 @@
-export const utils = (function() {
+export const utils = (function() { 
   return {
     DictIntersection: function(dictA, dictB) {
       const intersection = {};

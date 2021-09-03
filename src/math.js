@@ -1,4 +1,4 @@
-export const math = (function() {
+export const math = (function() { //이건 안쓰이는 듯..?
   return {
     rand_range: function (a, b) {
       return Math.random() * (b - a) + a;
